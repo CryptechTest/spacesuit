@@ -6,10 +6,10 @@ local function check_player(player, timer)
 		return
 	end
 
-	local has_helmet = armor_inv:contains_item("armor", "spacesuit:helmet")
-	local has_chestplate = armor_inv:contains_item("armor", "spacesuit:chestplate")
-	local has_pants = armor_inv:contains_item("armor", "spacesuit:pants")
-	local has_boots = armor_inv:contains_item("armor", "spacesuit:boots")
+	local has_helmet = armor_inv:contains_item("armor", "spacesuit:helmet_base") or armor_inv:contains_item("armor", "spacesuit:helmet") 
+	local has_chestplate = armor_inv:contains_item("armor", "spacesuit:chestplate_base") or armor_inv:contains_item("armor", "spacesuit:chestplate")
+	local has_pants = armor_inv:contains_item("armor", "spacesuit:pants_base") or armor_inv:contains_item("armor", "spacesuit:pants")
+	local has_boots = armor_inv:contains_item("armor", "spacesuit:boots_base") or armor_inv:contains_item("armor", "spacesuit:boots")
 
 	local has_full_suit = has_helmet and has_chestplate and has_pants and has_boots
 

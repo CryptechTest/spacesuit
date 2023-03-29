@@ -109,13 +109,13 @@ local update_hud = function(player, has_full_suit, armor_list)
 	local max_wear = 0
 	for _,item in pairs(armor_list) do
 		-- wear:0 == full, wear:65535 == empty
-		if item:get_name() == "spacesuit:helmet" then
+		if item:get_name() and string.find(item:get_name(), "spacesuit:helmet") then
 			max_wear = math.max(max_wear, item:get_wear())
-		elseif item:get_name() == "spacesuit:chestplate" then
+		elseif item:get_name() and string.find(item:get_name(), "spacesuit:chestplate") then
 			max_wear = math.max(max_wear, item:get_wear())
-		elseif item:get_name() == "spacesuit:pants" then
+		elseif item:get_name() and string.find(item:get_name(), "spacesuit:pants") then
 			max_wear = math.max(max_wear, item:get_wear())
-		elseif item:get_name() == "spacesuit:boots" then
+		elseif item:get_name() and string.find(item:get_name(), "spacesuit:boots") then
 			max_wear = math.max(max_wear, item:get_wear())
 		end
 	end
