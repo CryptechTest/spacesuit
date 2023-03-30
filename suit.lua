@@ -47,7 +47,7 @@ if minetest.settings:get_bool("spacesuit.enable_legacy_support") then
 	armor:register_armor("spacesuit:chestplate", {
 		description = "Spacesuit Chestplate",
 		inventory_image = "spacesuit_inv_chestplate_base.png",
-		groups = {armor_torso=8, armor_heal=1, armor_use=spacesuit.armor_use, not_repaired_by_anvil=1,not_in_creative_inventory=0},
+		groups = {armor_torso=8, armor_heal=1, armor_use=spacesuit.armor_use, not_repaired_by_anvil=1,not_in_creative_inventory=1},
 		wear = 0,
 		wear_represents = "spacesuit_wear",
 	})
