@@ -118,6 +118,15 @@ local update_hud = function(player, has_full_suit, armor_list)
 		elseif item:get_name() and string.find(item:get_name(), "spacesuit:boots") then
 			max_wear = math.max(max_wear, item:get_wear())
 		end
+		if item:get_name() and string.find(item:get_name(), "ctg_spacesuit:helmet") then
+			max_wear = math.max(max_wear, item:get_wear())
+		elseif item:get_name() and string.find(item:get_name(), "ctg_spacesuit:chestplate") then
+			max_wear = math.max(max_wear, item:get_wear())
+		elseif item:get_name() and string.find(item:get_name(), "ctg_spacesuit:pants") then
+			max_wear = math.max(max_wear, item:get_wear())
+		elseif item:get_name() and string.find(item:get_name(), "ctg_spacesuit:boots") then
+			max_wear = math.max(max_wear, item:get_wear())
+		end
 	end
 
 	local factor_full = 1 - (max_wear / 65535)
