@@ -38,6 +38,9 @@ local function check_player(player, timer)
 				if name:sub(1, 10) == "spacesuit:" then
 					local use = minetest.get_item_group(name, "armor_use") * timer or 0
 					armor:damage(player, i, stack, use)
+				elseif name:sub(1, 14) == "ctg_spacesuit:" then
+					local use = minetest.get_item_group(name, "armor_use") * timer or 0
+					armor:damage(player, i, stack, use)
 				end
 			end
 		end
