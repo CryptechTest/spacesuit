@@ -65,13 +65,13 @@ local function check_player(player, timer)
                 -- player does not wear a suit, let him/her suffer slowly?!
                 local breath = player:get_breath()
                 if breath > 1 then
-                    player:set_breath(math.max(1, player:get_breath() - 1))
+                    player:set_breath(math.max(1, player:get_breath() - 2))
                 end
             elseif node.name == ":asteroid:atmos" then
                 -- player does not wear a suit, let him/her suffer slower?!
                 local breath = player:get_breath()
                 if breath > 1 and math.random(0, 1) == 0 then
-                    player:set_breath(math.max(1, player:get_breath() - 1))
+                    player:set_breath(math.max(1, player:get_breath() - 3))
                 end
             end
         end
