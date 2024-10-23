@@ -64,7 +64,7 @@ local function check_player(player, timer)
             elseif node.name == "vacuum:atmos_thin" then
                 -- player does not wear a suit, let him/her suffer slowly?!
                 local breath = player:get_breath()
-                if breath > 1 then
+                if breath > 0 then
                     player:set_breath(math.max(1, player:get_breath() - 2))
                 end
             elseif node.name == ":asteroid:atmos" then
